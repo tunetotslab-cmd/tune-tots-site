@@ -1,6 +1,6 @@
 :root{
-  --pink:#ff9df1;
-  --pink2:#f785df;
+  --pink:#ff9df2;
+  --pink2:#ff9df2;
   --yellow:#f8ff25;
   --purple:#727cff;
   --green:#45b96e;
@@ -15,9 +15,11 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--pink);color:var(--ink);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");z-index:20}
 a{color:inherit;text-decoration:none}
-.nav{height:76px;border-bottom:var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;background:rgba(255,157,241,.92);backdrop-filter:blur(12px);z-index:10}
+.nav{height:76px;border-bottom:var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;background:rgba(255,157,242,.92);backdrop-filter:blur(12px);z-index:10}
 .brand{font-size:25px;font-weight:1000;letter-spacing:-1.5px}
 .brand span{font-size:10px;vertical-align:top;margin-left:2px}
+.brand-image{display:flex;width:112px;height:64px;align-items:center;overflow:visible}
+.brand-image img{display:block;width:100%;height:100%;object-fit:contain}
 .nav nav{display:flex;gap:30px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
 .nav nav a:hover{text-decoration:underline}
 .nav-cta{border:var(--border);padding:12px 16px;border-radius:999px;font-size:11px;font-weight:900;background:var(--yellow)}
@@ -37,27 +39,36 @@ h2{font-size:clamp(46px,6vw,92px);line-height:.88;margin-bottom:30px}
 .button:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
 .button-dark{background:var(--ink);color:var(--white)}
 .button-yellow{background:var(--yellow);color:var(--ink);margin-top:38px}
+.button-purple{background:var(--purple);color:var(--ink);margin-top:18px}
+.button-blue{background:var(--blue)!important;color:var(--ink)}
 .button span{font-size:18px;margin-left:12px}
 .text-link{font-size:11px;font-weight:900;text-decoration:underline}
 .hero-art{position:relative;min-height:600px;display:flex;align-items:center;justify-content:center}
-.hero-art img{width:min(650px,100%);height:auto;mix-blend-mode:multiply;position:relative;z-index:2}
-.orbit{position:absolute;border:2px solid var(--ink);border-radius:50%;aspect-ratio:1}
-.orbit-a{width:78%;transform:rotate(17deg)}
-.orbit-b{width:55%;border-style:dashed;transform:rotate(-30deg)}
-.sticker{position:absolute;right:0;bottom:7%;z-index:3;background:var(--yellow);border:var(--border);border-radius:50%;width:120px;height:120px;display:grid;place-content:center;text-align:center;font-size:10px;font-weight:1000;line-height:1.1;transform:rotate(10deg)}
+.hero-art img{width:min(580px,100%);height:auto;display:block}
 .marquee{overflow:hidden;border-bottom:var(--border);border-top:var(--border);background:var(--yellow);white-space:nowrap}
-.marquee div{font-size:22px;font-weight:1000;letter-spacing:.04em;padding:15px 0;animation:marquee 18s linear infinite}
-@keyframes marquee{to{transform:translateX(-35%)}}
-.intro{background:var(--white)}
+.marquee-track{display:flex;width:max-content;font-size:22px;font-weight:1000;letter-spacing:.04em;padding:15px 0;will-change:transform;animation:marquee 16s linear infinite}
+.marquee-group{display:flex;align-items:center;flex:none;gap:24px;padding-right:24px}
+.marquee-group span,.marquee-group b{display:block;flex:none}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.intro{background:var(--white);overflow:hidden;min-height:760px}
 .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:8vw}
+.intro-grid{position:relative;z-index:2}
 .intro h2{max-width:800px}
 .big-copy{font-size:23px;line-height:1.25;max-width:650px;padding-top:54px}
 .big-copy p+p{margin-top:28px}
-.manifesto{background:var(--purple);color:var(--yellow);min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:8vw;position:relative;overflow:hidden}
-.manifesto-word{font-size:clamp(70px,15vw,230px);font-weight:1000;line-height:.76;letter-spacing:-.09em;transform:rotate(-2deg)}
+.intro-lab-art{position:relative;height:310px;margin:55px 0 -90px;border-top:var(--border)}
+.intro-lab-art img{position:absolute;right:2vw;bottom:-12px;width:270px;height:auto;z-index:2;filter:drop-shadow(8px 10px 0 var(--pink))}
+.sound-ring{position:absolute;border:3px solid var(--purple);border-radius:50%;aspect-ratio:1}
+.ring-one{width:240px;left:8vw;top:35px}.ring-two{width:150px;left:17vw;top:105px;border-color:var(--green);border-style:dashed}
+.lab-note{position:absolute;border:var(--border);padding:13px 16px;font-size:11px;font-weight:1000;line-height:1.1;box-shadow:5px 5px 0 var(--ink)}
+.note-a{left:2vw;top:75px;background:var(--yellow);transform:rotate(-5deg)}.note-b{left:31vw;top:45px;background:var(--pink);transform:rotate(4deg)}
+.manifesto{background:var(--purple);color:var(--yellow);min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:8vw 28vw 8vw 8vw;position:relative;overflow:hidden}
+.manifesto-word{font-size:clamp(70px,11vw,170px);font-weight:1000;line-height:.8;letter-spacing:-.09em;transform:rotate(-2deg)}
 .manifesto-word:nth-child(2){margin-left:10vw;transform:rotate(2deg);font-family:Georgia,serif;font-weight:400}
 .manifesto-word:nth-child(3){margin-left:20vw;transform:rotate(-1deg)}
 .manifesto-note{position:absolute;right:4vw;bottom:4vw;color:var(--ink);font-size:10px;font-weight:900}
+.manifesto-mascot{position:absolute;right:3vw;top:50%;width:clamp(190px,21vw,320px);height:auto;transform:translateY(-50%) rotate(5deg);filter:drop-shadow(9px 12px 0 var(--ink));z-index:1}
+.manifesto-word,.manifesto-note{position:relative;z-index:2}
 .course{background:var(--green);border-bottom:var(--border)}
 .course-head{display:flex;justify-content:space-between;gap:30px;align-items:flex-end}
 .course-price{text-align:right}
@@ -71,46 +82,66 @@ h2{font-size:clamp(46px,6vw,92px);line-height:.88;margin-bottom:30px}
 .course-description{display:grid;grid-template-columns:1fr 1fr;gap:6vw;max-width:1100px;font-size:22px;line-height:1.25}
 .program{background:var(--white)}
 .program-head{margin-left:5vw}
-.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:65px 0 0 5vw}
-.program-card{min-height:350px;border:var(--border);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;transition:.2s transform}
+.program-grid{display:grid;grid-template-columns:repeat(3,minmax(0,330px));justify-content:center;gap:14px;margin:52px auto 0}
+.program-card{min-height:275px;border:var(--border);border-radius:24px;padding:21px;position:relative;overflow:hidden;transition:.2s transform}
 .program-card:hover{transform:rotate(-1deg) translateY(-5px)}
 .program-card>span{font-size:11px;font-weight:900}
-.program-card h3{font-size:42px;margin:40px 0 15px}
-.program-card p{font-size:16px;line-height:1.2;max-width:310px}
-.card-symbol{position:absolute;right:20px;bottom:-15px;font-size:145px;line-height:1;font-weight:1000;opacity:.35}
+.program-card h3{font-size:34px;margin:30px 0 13px}
+.program-card p{font-size:14px;line-height:1.25;max-width:270px}
+.card-symbol{position:absolute;right:16px;bottom:-12px;font-size:108px;line-height:1;font-weight:1000;opacity:.3}
 .card-purple{background:var(--purple)}
 .card-green{background:var(--green)}
 .card-yellow{background:var(--yellow)}
 .card-pink{background:var(--pink)}
 .card-dark{background:var(--ink);color:var(--white)}
 .card-blue{background:var(--blue)}
-.playtronica{display:grid;grid-template-columns:1fr 1fr;gap:8vw;background:var(--yellow);align-items:center}
-.playtronica-image{border:var(--border);transform:rotate(-3deg);overflow:hidden;background:var(--pink)}
+.playtronica{display:grid;grid-template-columns:1fr 1fr;gap:8vw;background:var(--yellow);align-items:center;overflow:hidden}
+.playtronica-image{overflow:hidden;background:var(--pink);border:var(--border);border-radius:34px 8px 34px 8px;padding:12px;box-shadow:12px 12px 0 var(--ink);transform:rotate(-1.5deg)}
+.playtronica-image img{border-radius:23px 4px 23px 4px}
 .playtronica-image img{display:block;width:100%;height:auto}
 .playtronica-copy{max-width:650px;font-size:21px;line-height:1.25}
-.philosophy{background:var(--purple)}
+.philosophy{background:var(--pink)}
 .philosophy-grid{display:grid;grid-template-columns:1fr 1fr;gap:8vw}
 .philosophy-list{padding-top:35px}
 .philosophy-list div{display:grid;grid-template-columns:50px 1fr;gap:20px;border-top:var(--border);padding:25px 0;font-size:18px;line-height:1.25}
 .philosophy-list div:last-child{border-bottom:var(--border)}
 .philosophy-list span{font-size:11px;font-weight:900}
+.philosophy-mascot{position:absolute;right:2vw;bottom:1vw;width:170px;height:auto;transform:rotate(5deg);filter:drop-shadow(6px 8px 0 var(--ink));z-index:1}
+.philosophy-grid{position:relative;z-index:2;padding-right:170px}
+.philosophy-logo{position:absolute;left:3vw;bottom:3vw;width:120px;height:120px;object-fit:cover;object-position:center;border:var(--border);transform:rotate(-5deg)}
 .teacher{background:var(--white);display:grid;grid-template-columns:.8fr 1.2fr;gap:8vw;align-items:center}
-.teacher-photo{min-height:620px;background:var(--pink) url("assets/tune-tots-poster.png") center/cover no-repeat;border:var(--border);position:relative;transform:rotate(2deg)}
+.teacher-photo{min-height:620px;background:var(--yellow);border:var(--border);position:relative;transform:rotate(2deg);overflow:hidden}
+.teacher-photo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .photo-label{position:absolute;bottom:20px;left:20px;background:var(--yellow);border:var(--border);padding:12px;font-size:10px;font-weight:1000;line-height:1.15}
 .teacher-copy{max-width:700px;font-size:18px;line-height:1.3}
 .teacher-copy .lead{font-size:26px}
-.result{background:var(--blue);display:grid;grid-template-columns:260px 1fr;gap:8vw;align-items:center}
+.teacher-bio{list-style:none;padding:0;margin:28px 0 8px;border-top:var(--border);font-size:15px;line-height:1.28}
+.teacher-bio li{padding:12px 0 12px 24px;border-bottom:1px solid var(--ink);position:relative}
+.teacher-bio li:before{content:"✦";position:absolute;left:0;top:12px}
+.result{background:var(--blue);display:grid;grid-template-columns:260px minmax(0,1fr) 180px;gap:5vw;align-items:center}
 .result>div:last-child{max-width:800px}
 .result>div:last-child>p{font-size:23px;line-height:1.25;max-width:700px}
 .result-stamp{width:220px;height:220px;border:var(--border);border-radius:50%;display:grid;place-content:center;text-align:center;font-size:40px;font-weight:1000;line-height:.8;background:var(--yellow);transform:rotate(-10deg)}
-.cta{background:var(--yellow);padding:80px 5vw 35px;border-top:var(--border);border-bottom:var(--border)}
+.result-mascot{position:relative;right:auto;bottom:auto;width:180px;height:auto;transform:rotate(3deg);filter:drop-shadow(6px 8px 0 var(--ink))}
+.course-late{padding-right:20vw;overflow:hidden}
+.course-logo{position:absolute;right:2vw;top:50%;width:190px;height:190px;object-fit:cover;transform:translateY(-50%) rotate(5deg);border:var(--border)}
+.cta{background:var(--yellow);padding:80px 5vw 35px;border-top:var(--border);border-bottom:var(--border);position:relative;overflow:hidden}
 .cta-top,.cta-bottom{display:flex;justify-content:space-between;gap:20px;font-size:10px;font-weight:900;letter-spacing:.12em}
 .cta h2{font-size:clamp(80px,15vw,220px);margin:100px 0 20px;line-height:.7}
 .cta>p{font-size:21px;max-width:560px;line-height:1.2}
-.huge{font-size:14px;padding:20px 30px;margin:15px 0 100px}
+.contact-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:30px 0 80px}
+.contact-actions .button:not(.button-dark):not(.button-blue){background:var(--pink)}
+.qr-block{display:grid;grid-template-columns:.55fr 1.45fr;align-items:center;gap:5vw;padding:34px;background:var(--pink);border:var(--border);margin-bottom:70px}
+.qr-block h3{font-size:clamp(36px,5vw,70px);line-height:.85;margin-bottom:20px}
+.qr-block p:last-child{font-size:17px;line-height:1.25}
+.qr-block img{display:block;width:100%;height:auto}
 .cta-bottom{padding-top:20px;border-top:var(--border)}
+.cta-peek{position:absolute;right:0;bottom:0;top:auto;width:clamp(220px,31vw,450px);height:auto;max-height:88%;object-fit:contain;object-position:right bottom;z-index:1;transform-origin:right bottom}
+.cta>h2,.cta>p,.contact-actions,.qr-block,.cta-top,.cta-bottom{position:relative;z-index:2}
 footer{background:var(--ink);color:var(--white);display:flex;justify-content:space-between;align-items:center;padding:28px;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 footer .brand{font-size:20px}
+.footer-logo{width:105px;height:72px;object-fit:contain;filter:invert(1)}
+.footer-links{display:flex;gap:20px}
 @media(max-width:900px){
   .nav nav{display:none}
   .nav{padding:0 16px}
@@ -122,6 +153,9 @@ footer .brand{font-size:20px}
   .hero-text{font-size:18px}
   .intro-grid,.philosophy-grid,.teacher,.playtronica,.result{grid-template-columns:1fr}
   .big-copy{padding-top:0}
+  .intro{min-height:auto}
+  .intro-lab-art{height:260px;margin-bottom:-50px}
+  .intro-lab-art img{width:220px;right:0}
   .program-grid{grid-template-columns:1fr 1fr;margin-left:0}
   .program-head{margin-left:0}
   .course-head{display:block}
@@ -131,22 +165,36 @@ footer .brand{font-size:20px}
   .course-facts div{border-bottom:var(--border)}
   .course-description{grid-template-columns:1fr}
   .teacher-photo{min-height:500px}
+  .manifesto-mascot{width:150px}
+  .philosophy-grid{padding-right:0}
+  .philosophy-mascot,.result-mascot,.philosophy-logo,.course-logo{display:none}
+  .cta-peek{width:clamp(190px,36vw,280px);right:-45px;bottom:0;top:auto;max-height:62%;opacity:.9}
+  .course-late{padding-right:6vw}
+  .qr-block{grid-template-columns:1fr;padding:20px}
 }
 @media(max-width:600px){
-  h1{font-size:54px}
+  h1{font-size:42px;line-height:.88}
   h2{font-size:50px}
   .nav-cta{padding:10px 11px;font-size:9px}
   .brand{font-size:20px}
   .hero-actions{align-items:flex-start;flex-direction:column}
   .program-grid{grid-template-columns:1fr}
   .program-card{min-height:300px}
-  .manifesto{min-height:65vh;padding:13vw 7vw}
-  .manifesto-word{font-size:22vw}
+  .manifesto{min-height:75vh;padding:13vw 7vw 280px}
+  .manifesto-word{font-size:19vw;letter-spacing:-.07em}
   .manifesto-word:nth-child(2){margin-left:2vw}
   .manifesto-word:nth-child(3){margin-left:7vw}
+  .manifesto-mascot{width:190px;right:50%;top:auto;bottom:30px;transform:translateX(50%) rotate(3deg)}
   .course-facts strong{font-size:32px}
   .course-facts span{font-size:9px}
   .result{display:block}
   .result-stamp{margin-bottom:55px}
   footer{flex-direction:column;align-items:flex-start;gap:12px}
+  .hero-art{min-height:auto;margin-top:35px}
+  .contact-actions{align-items:flex-start;flex-direction:column}
+  .cta-peek{width:clamp(150px,48vw,190px);right:-38px;bottom:0;top:auto;max-height:48%;opacity:.82}
+  .intro-lab-art{height:300px;margin-top:35px}
+  .intro-lab-art img{width:190px;right:-25px}
+  .ring-one{width:180px;left:-40px}.ring-two{width:110px;left:45px}.note-b{left:35vw;top:15px}
 }
+@media(prefers-reduced-motion:reduce){.marquee-track{animation-play-state:paused}}

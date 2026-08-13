@@ -11,7 +11,7 @@
   <div class="noise"></div>
 
   <header class="nav">
-    <a class="brand" href="#top">TUNE TOTS<span>®</span></a>
+    <a class="brand brand-image" href="#top"><img src="assets/logo/tune-tots-transparent.png" alt="Tune Tots"></a>
     <nav>
       <a href="#about">Лаборатория</a>
       <a href="#course">Курс</a>
@@ -36,15 +36,15 @@
         </div>
       </div>
       <div class="hero-art">
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <img src="assets/tune-tots-landscape.png" alt="Tune Tots mascot">
-        <div class="sticker">PLAY<br>IMPROVISE<br>CREATE</div>
+        <img src="assets/logo/main.png" alt="Tune Tots Music Laboratory">
       </div>
     </section>
 
     <section class="marquee" aria-label="Tune Tots principles">
-      <div>PLAY ✦ IMPROVISE ✦ CREATE ✦ PLAY ✦ IMPROVISE ✦ CREATE ✦</div>
+      <div class="marquee-track">
+        <div class="marquee-group"><span>PLAY</span><b>•</b><span>IMPROVISE</span><b>•</b><span>CREATE</span><b>•</b><span>PLAY</span><b>•</b><span>IMPROVISE</span><b>•</b><span>CREATE</span><b>•</b></div>
+        <div class="marquee-group" aria-hidden="true"><span>PLAY</span><b>•</b><span>IMPROVISE</span><b>•</b><span>CREATE</span><b>•</b><span>PLAY</span><b>•</b><span>IMPROVISE</span><b>•</b><span>CREATE</span><b>•</b></div>
+      </div>
     </section>
 
     <section class="intro section" id="about">
@@ -66,6 +66,11 @@
           </p>
         </div>
       </div>
+      <div class="intro-lab-art" aria-hidden="true">
+        <span class="sound-ring ring-one"></span><span class="sound-ring ring-two"></span>
+        <div class="lab-note note-a">FIELD<br>RECORDING</div><div class="lab-note note-b">ABLETON<br>LIVE</div>
+        <img src="assets/mascot/miley-synth.png" alt="" loading="lazy">
+      </div>
     </section>
 
     <section class="manifesto">
@@ -73,43 +78,30 @@
       <div class="manifesto-word">IMPROVISE</div>
       <div class="manifesto-word">CREATE</div>
       <div class="manifesto-note">© TUNE TOTS MUSIC LABORATORY</div>
+      <img class="manifesto-mascot" src="assets/mascot/miley-field-youth.png" alt="Miley записывает звуки природы" loading="lazy">
     </section>
 
-    <section class="section course" id="course">
-      <div class="section-number">02</div>
-      <div class="course-head">
-        <div>
-          <p class="eyebrow">THE COURSE</p>
-          <h2>От первого звука<br>до собственного трека.</h2>
-        </div>
-        <div class="course-price">
-          <strong>45 000 ֏</strong>
-          <span>полный курс</span>
-        </div>
+    <section class="teacher section">
+      <div class="teacher-photo">
+        <img src="assets/photos/nikola.jpg" alt="Nikola Chen — создатель и преподаватель Tune Tots" loading="lazy">
+        <div class="photo-label">NIKOLA CHEN<br>COMPOSER / SOUND DESIGNER</div>
       </div>
-
-      <div class="course-facts">
-        <div><strong>08</strong><span>занятий</span></div>
-        <div><strong>02h</strong><span>каждое занятие</span></div>
-        <div><strong>2×</strong><span>в неделю</span></div>
-        <div><strong>6 000 ֏</strong><span>одно занятие</span></div>
+      <div class="teacher-copy">
+        <p class="eyebrow">THE PERSON BEHIND THE LAB</p>
+        <h2>Никола Чен</h2>
+        <p class="lead">Композитор, саунд-дизайнер, мультиинструменталист, преподаватель и основатель Tune Tots Lab.</p>
+        <ul class="teacher-bio">
+          <li>Окончил Московскую государственную консерваторию им. П. И. Чайковского по классу кларнета и фортепиано.</li>
+          <li>Окончил курсы звукорежиссуры в школе МАСКЕЛИАДЕ и саунд-дизайна в школе MusicLab.</li>
+          <li>Преподавал кларнет в музыкальной школе им. А. Б. Гольденвейзера и курс звукорежиссуры для детей в музыкальной школе им. Н. П. Ракова в Москве.</li>
+          <li>Сотрудничает как композитор с Audi, Mercedes-Benz, McDonald’s, Skyeng и Playtronica.</li>
+          <li>Музыка Николы звучала на Неделе моды в Копенгагене и вошла в саундтрек театральной постановки на Бродвее в Нью-Йорке.</li>
+          <li>Куратор экспериментальной сцены фестиваля DiliRock в Дилижане.</li>
+          <li>Лауреат I премии Международного конкурса имени Яна Сибелиуса в Финляндии.</li>
+          <li>Участник событий Resonance Moscow, M-Division и трёх Московских биеннале современного искусства.</li>
+        </ul>
+        <a class="button button-purple" href="http://nikolachen.tilda.ws/" target="_blank" rel="noopener">ПОРТФОЛИО НИКОЛЫ ↗</a>
       </div>
-
-      <div class="course-description">
-        <p>
-          За восемь встреч дети пройдут путь от первого записанного звука
-          до законченного музыкального произведения.
-        </p>
-        <p>
-          Финальный результат — собственный трек и опыт коллективного
-          выступления в электронном оркестре Tune Tots с устройствами
-          Playtronica.
-        </p>
-      </div>
-
-      <a class="button button-yellow" href="https://instagram.com/tunetots_lab" target="_blank" rel="noopener">
-        ХОЧУ НА КУРС ↗
-      </a>
     </section>
 
     <section class="program section" id="program">
@@ -166,7 +158,7 @@
 
     <section class="playtronica section">
       <div class="playtronica-image">
-        <img src="assets/tune-tots-poster.png" alt="Tune Tots poster">
+        <img src="assets/photos/playtronica.jpg" alt="Nikola Chen играет на фруктах и овощах с Playtronica" loading="lazy">
       </div>
       <div class="playtronica-copy">
         <p class="eyebrow">PLAYTRONICA × TUNE TOTS</p>
@@ -196,30 +188,8 @@
           <div><span>03</span><p><b>Творчество вместо соревнования.</b><br>Дети учатся слушать, поддерживать и создавать вместе.</p></div>
         </div>
       </div>
-    </section>
-
-    <section class="teacher section">
-      <div class="teacher-photo">
-        <div class="photo-label">NIKOLA CHEN<br>COMPOSER / SOUND DESIGNER</div>
-      </div>
-      <div class="teacher-copy">
-        <p class="eyebrow">THE PERSON BEHIND THE LAB</p>
-        <h2>Никола Чен</h2>
-        <p class="lead">
-          Композитор, саунд-дизайнер, мультиинструменталист, преподаватель
-          и основатель Tune Tots Lab.
-        </p>
-        <p>
-          Выпускник Московской государственной консерватории им. П. И. Чайковского.
-          Работал с Mercedes-Benz, Audi, McDonald's, Spotify, Playtronica и другими
-          проектами; участвовал в Московских биеннале современного искусства.
-        </p>
-        <p>
-          Музыкой занимается практически всю жизнь и преподаёт детям,
-          соединяя фундаментальное музыкальное образование с современными
-          технологиями и экспериментом.
-        </p>
-      </div>
+      <img class="philosophy-mascot" src="assets/mascot/miley-kitchen.png" alt="Miley создаёт музыку из звуков кухни" loading="lazy">
+      <img class="philosophy-logo" src="assets/logo/color-purple.png" alt="Tune Tots mascot logo" loading="lazy">
     </section>
 
     <section class="result section">
@@ -233,6 +203,21 @@
           создавать музыку».
         </p>
       </div>
+      <img class="result-mascot" src="assets/mascot/miley-studio.png" alt="Miley в студии Tune Tots" loading="lazy">
+    </section>
+
+    <section class="section course course-late" id="course">
+      <div class="section-number">05</div>
+      <div class="course-head">
+        <div><p class="eyebrow">THE COURSE</p><h2>От первого звука<br>до собственного трека.</h2></div>
+        <div class="course-price"><strong>45 000 ֏</strong><span>полный курс</span></div>
+      </div>
+      <div class="course-facts">
+        <div><strong>08</strong><span>занятий</span></div><div><strong>02h</strong><span>каждое занятие</span></div><div><strong>2×</strong><span>в неделю</span></div><div><strong>6 000 ֏</strong><span>одно занятие</span></div>
+      </div>
+      <div class="course-description"><p>За восемь встреч дети пройдут путь от первого записанного звука до законченного музыкального произведения.</p><p>Финальный результат — собственный трек и опыт коллективного выступления в электронном оркестре Tune Tots с устройствами Playtronica.</p></div>
+      <a class="button button-yellow" href="https://instagram.com/tunetots_lab" target="_blank" rel="noopener">ХОЧУ НА КУРС ↗</a>
+      <img class="course-logo" src="assets/logo/color-green.png" alt="Tune Tots mascot logo" loading="lazy">
     </section>
 
     <section class="cta" id="contact">
@@ -242,20 +227,27 @@
       </div>
       <h2>Давай<br><i>создавать.</i></h2>
       <p>Напишите нам, чтобы узнать ближайшую дату набора и записать ребёнка.</p>
-      <a class="button button-dark huge" href="https://instagram.com/tunetots_lab" target="_blank" rel="noopener">
-        НАПИСАТЬ TUNE TOTS ↗
-      </a>
+      <div class="contact-actions">
+        <a class="button button-dark" href="https://t.me/tunetots" target="_blank" rel="noopener">TELEGRAM TUNE TOTS ↗</a>
+        <a class="button" href="mailto:tunetotslab@gmail.com">НАПИСАТЬ EMAIL ↗</a>
+        <a class="button button-blue" href="https://t.me/nikolachenmusic" target="_blank" rel="noopener">НАПИСАТЬ НИКОЛЕ ↗</a>
+      </div>
+      <div class="qr-block">
+        <div><p class="eyebrow">STAY TUNED</p><h3>Telegram<br>и Instagram</h3><p>Новости лаборатории, анонсы наборов и музыка из наших экспериментов.</p></div>
+        <img src="assets/contact/qr.png" alt="QR-коды Tune Tots Lab для Telegram и Instagram" loading="lazy">
+      </div>
       <div class="cta-bottom">
         <span>TUNE TOTS MUSIC LABORATORY</span>
         <span>PLAY · IMPROVISE · CREATE</span>
       </div>
+      <img class="cta-peek" src="assets/mascot/miley-peek-original.png" alt="Miley выглядывает справа и машет рукой" loading="lazy">
     </section>
   </main>
 
   <footer>
-    <div class="brand">TUNE TOTS<span>®</span></div>
-    <div>Music Laboratory</div>
-    <a href="https://instagram.com/tunetots_lab" target="_blank" rel="noopener">@tunetots_lab ↗</a>
+    <img class="footer-logo" src="assets/logo/tune-tots-transparent.png" alt="Tune Tots">
+    <a href="mailto:tunetotslab@gmail.com">tunetotslab@gmail.com</a>
+    <div class="footer-links"><a href="https://t.me/tunetots" target="_blank" rel="noopener">Telegram ↗</a><a href="https://instagram.com/tunetots_lab" target="_blank" rel="noopener">Instagram ↗</a></div>
   </footer>
 
   <script src="content.js"></script>
